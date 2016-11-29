@@ -55,7 +55,19 @@ $tax_4 = $_taxes[$__taxes[4]];
       <div class="timer" data-timer="360"></div>
     </div>
   </header>
-  <form id="main" class="container">
+  <form id="main" class="container" action="score.php" method="post">
+    <input type="hidden" name="tax_0_name" value="<?php echo $tax_0->tax_name; ?>">
+    <input type="hidden" name="tax_1_name" value="<?php echo $tax_1->tax_name; ?>">
+    <input type="hidden" name="tax_2_name" value="<?php echo $tax_2->tax_name; ?>">
+    <input type="hidden" name="tax_3_name" value="<?php echo $tax_3->tax_name; ?>">
+    <input type="hidden" name="tax_4_name" value="<?php echo $tax_4->tax_name; ?>">
+
+    <input type="hidden" name="letter_0_value" value="<?php echo $letter_0; ?>">
+    <input type="hidden" name="letter_1_value" value="<?php echo $letter_1; ?>">
+    <input type="hidden" name="letter_2_value" value="<?php echo $letter_2; ?>">
+    <input type="hidden" name="letter_3_value" value="<?php echo $letter_3; ?>">
+    <input type="hidden" name="letter_4_value" value="<?php echo $letter_4; ?>">
+
     <table class="table table-bordered">
       <thead>
         <tr>
@@ -70,48 +82,48 @@ $tax_4 = $_taxes[$__taxes[4]];
       </thead>
       <tbody>
         <tr>
-          <th id="letter_0" scope="row"><?php echo $letter_0; ?></th>
-          <td class="form-group"><input type="text" class="form-control letter-0 tax-0" id="letter_0_tax_0"></td>
-          <td class="form-group"><input type="text" class="form-control letter-0 tax-1" id="letter_0_tax_1"></td>
-          <td class="form-group"><input type="text" class="form-control letter-0 tax-2" id="letter_0_tax_2"></td>
-          <td class="form-group"><input type="text" class="form-control letter-0 tax-3" id="letter_0_tax_3"></td>
-          <td class="form-group"><input type="text" class="form-control letter-0 tax-4" id="letter_0_tax_4"></td>
+          <th name="letter_0" scope="row"><?php echo $letter_0; ?></th>
+          <td class="form-group"><input type="text" class="form-control letter-0 tax-0" name="letter_0_tax_0"></td>
+          <td class="form-group"><input type="text" class="form-control letter-0 tax-1" name="letter_0_tax_1"></td>
+          <td class="form-group"><input type="text" class="form-control letter-0 tax-2" name="letter_0_tax_2"></td>
+          <td class="form-group"><input type="text" class="form-control letter-0 tax-3" name="letter_0_tax_3"></td>
+          <td class="form-group"><input type="text" class="form-control letter-0 tax-4" name="letter_0_tax_4"></td>
           <td class="form-group"><input type="text" class="form-control" id="total_letter_0" disabled></td>
         </tr>
         <tr>
-          <th id="letter_1" scope="row"><?php echo $letter_1; ?></th>
-          <td class="form-group"><input type="text" class="form-control letter-1 tax-0" id="letter_1_tax_0"></td>
-          <td class="form-group"><input type="text" class="form-control letter-1 tax-1" id="letter_1_tax_1"></td>
-          <td class="form-group"><input type="text" class="form-control letter-1 tax-2" id="letter_1_tax_2"></td>
-          <td class="form-group"><input type="text" class="form-control letter-1 tax-3" id="letter_1_tax_3"></td>
-          <td class="form-group"><input type="text" class="form-control letter-1 tax-4" id="letter_1_tax_4"></td>
+          <th name="letter_1" scope="row"><?php echo $letter_1; ?></th>
+          <td class="form-group"><input type="text" class="form-control letter-1 tax-0" name="letter_1_tax_0"></td>
+          <td class="form-group"><input type="text" class="form-control letter-1 tax-1" name="letter_1_tax_1"></td>
+          <td class="form-group"><input type="text" class="form-control letter-1 tax-2" name="letter_1_tax_2"></td>
+          <td class="form-group"><input type="text" class="form-control letter-1 tax-3" name="letter_1_tax_3"></td>
+          <td class="form-group"><input type="text" class="form-control letter-1 tax-4" name="letter_1_tax_4"></td>
           <td class="form-group"><input type="text" class="form-control" id="total_letter_1" disabled></td>
         </tr>
         <tr>
-          <th id="letter_2" scope="row"><?php echo $letter_2; ?></th>
-          <td class="form-group"><input type="text" class="form-control letter-2 tax-0" id="letter_2_tax_0"></td>
-          <td class="form-group"><input type="text" class="form-control letter-2 tax-1" id="letter_2_tax_1"></td>
-          <td class="form-group"><input type="text" class="form-control letter-2 tax-2" id="letter_2_tax_2"></td>
-          <td class="form-group"><input type="text" class="form-control letter-2 tax-3" id="letter_2_tax_3"></td>
-          <td class="form-group"><input type="text" class="form-control letter-2 tax-4" id="letter_2_tax_4"></td>
+          <th name="letter_2" scope="row"><?php echo $letter_2; ?></th>
+          <td class="form-group"><input type="text" class="form-control letter-2 tax-0" name="letter_2_tax_0"></td>
+          <td class="form-group"><input type="text" class="form-control letter-2 tax-1" name="letter_2_tax_1"></td>
+          <td class="form-group"><input type="text" class="form-control letter-2 tax-2" name="letter_2_tax_2"></td>
+          <td class="form-group"><input type="text" class="form-control letter-2 tax-3" name="letter_2_tax_3"></td>
+          <td class="form-group"><input type="text" class="form-control letter-2 tax-4" name="letter_2_tax_4"></td>
           <td class="form-group"><input type="text" class="form-control" id="total_letter_2" disabled></td>
         </tr>
         <tr>
-          <th id="letter_3" scope="row"><?php echo $letter_3; ?></th>
-          <td class="form-group"><input type="text" class="form-control letter-3 tax-0" id="letter_3_tax_0"></td>
-          <td class="form-group"><input type="text" class="form-control letter-3 tax-1" id="letter_3_tax_1"></td>
-          <td class="form-group"><input type="text" class="form-control letter-3 tax-2" id="letter_3_tax_2"></td>
-          <td class="form-group"><input type="text" class="form-control letter-3 tax-3" id="letter_3_tax_3"></td>
-          <td class="form-group"><input type="text" class="form-control letter-3 tax-4" id="letter_3_tax_4"></td>
+          <th name="letter_3" scope="row"><?php echo $letter_3; ?></th>
+          <td class="form-group"><input type="text" class="form-control letter-3 tax-0" name="letter_3_tax_0"></td>
+          <td class="form-group"><input type="text" class="form-control letter-3 tax-1" name="letter_3_tax_1"></td>
+          <td class="form-group"><input type="text" class="form-control letter-3 tax-2" name="letter_3_tax_2"></td>
+          <td class="form-group"><input type="text" class="form-control letter-3 tax-3" name="letter_3_tax_3"></td>
+          <td class="form-group"><input type="text" class="form-control letter-3 tax-4" name="letter_3_tax_4"></td>
           <td class="form-group"><input type="text" class="form-control" id="total_letter_3" disabled></td>
         </tr>
         <tr>
-          <th id="letter_4" scope="row"><?php echo $letter_4; ?></th>
-          <td class="form-group"><input type="text" class="form-control letter-4 tax-0" id="letter_4_tax_0"></td>
-          <td class="form-group"><input type="text" class="form-control letter-4 tax-1" id="letter_4_tax_1"></td>
-          <td class="form-group"><input type="text" class="form-control letter-4 tax-2" id="letter_4_tax_2"></td>
-          <td class="form-group"><input type="text" class="form-control letter-4 tax-3" id="letter_4_tax_3"></td>
-          <td class="form-group"><input type="text" class="form-control letter-4 tax-4" id="letter_4_tax_4"></td>
+          <th name="letter_4" scope="row"><?php echo $letter_4; ?></th>
+          <td class="form-group"><input type="text" class="form-control letter-4 tax-0" name="letter_4_tax_0"></td>
+          <td class="form-group"><input type="text" class="form-control letter-4 tax-1" name="letter_4_tax_1"></td>
+          <td class="form-group"><input type="text" class="form-control letter-4 tax-2" name="letter_4_tax_2"></td>
+          <td class="form-group"><input type="text" class="form-control letter-4 tax-3" name="letter_4_tax_3"></td>
+          <td class="form-group"><input type="text" class="form-control letter-4 tax-4" name="letter_4_tax_4"></td>
           <td class="form-group"><input type="text" class="form-control" id="total_letter_4" disabled></td>
         </tr>
         <tr>
@@ -121,7 +133,7 @@ $tax_4 = $_taxes[$__taxes[4]];
           <td class="form-group"><input type="text" class="form-control" id="total_tax_2" disabled></td>
           <td class="form-group"><input type="text" class="form-control" id="total_tax_3" disabled></td>
           <td class="form-group"><input type="text" class="form-control" id="total_tax_4" disabled></td>
-          <td class="form-group"><button class="btn btn-block btn-primary">Submit</button></td>
+          <td class="form-group"><button type="submit" class="btn btn-block btn-primary">Submit</button></td>
         </tr>
       </tbody>
     </table>
